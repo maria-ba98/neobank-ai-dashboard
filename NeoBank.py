@@ -49,7 +49,7 @@ page = st.sidebar.radio(
 # -----------------------------------
 # DATABASE CONNECTION
 # -----------------------------------
-conn = sqlite3.connect("neobank_project/neobank_europe_v3.db")
+conn = sqlite3.connect("neobank_europe_v3.db")
 
 @st.cache_data
 def load_data():
