@@ -54,7 +54,7 @@ conn = sqlite3.connect("neobank_europe_v3.db")
 @st.cache_data
 def load_data():
 
-    conn = sqlite3.connect("neobank_europe_v3_full.db")
+    conn = sqlite3.connect("neobank_europ_v3.db.db")
 
     loans = pd.read_sql("SELECT * FROM loans", conn)
     deposits = pd.read_sql("SELECT * FROM deposits", conn)
