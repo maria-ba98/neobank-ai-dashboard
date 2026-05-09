@@ -56,18 +56,18 @@ def load_data():
 
     conn = sqlite3.connect("neobank_europe_v3_full.db")
 
-    loans = pd.read_sql("SELECT * FROM Loans", conn)
-    deposits = pd.read_sql("SELECT * FROM Deposits", conn)
-    customers = pd.read_sql("SELECT * FROM Customers", conn)
+    loans = pd.read_sql("SELECT * FROM loans", conn)
+    deposits = pd.read_sql("SELECT * FROM deposits", conn)
+    customers = pd.read_sql("SELECT * FROM customers", conn)
 
     return loans, deposits, customers
 
 # -----------------------------------
 # LOAD DATA
 # -----------------------------------
-loans = pd.read_sql("SELECT * FROM Loans", conn)
-deposits = pd.read_sql("SELECT * FROM Deposits", conn)
-customers = pd.read_sql("SELECT * FROM Customers", conn)
+loans = pd.read_sql("SELECT * FROM loans", conn)
+deposits = pd.read_sql("SELECT * FROM deposits", conn)
+customers = pd.read_sql("SELECT * FROM customers", conn)
 
 # تنظيف أسماء الأعمدة
 loans.columns = loans.columns.str.strip()
