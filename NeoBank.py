@@ -69,12 +69,6 @@ loans = pd.read_sql("SELECT * FROM loans", conn)
 deposits = pd.read_sql("SELECT * FROM deposits", conn)
 customers = pd.read_sql("SELECT * FROM customers", conn)
 
-tables = pd.read_sql(
-    "SELECT name FROM sqlite_master WHERE type='table';",
-    conn
-)
-
-st.write(tables)
 
 # تنظيف أسماء الأعمدة
 loans.columns = loans.columns.str.strip()
